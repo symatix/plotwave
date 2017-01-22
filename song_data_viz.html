@@ -1,0 +1,84 @@
+<head>
+  <title>plotWave</title>
+  <script src="vis.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  {{> song_viz}}
+</div>	
+</body>
+<!--
+<template name="song_viz">
+<div class="row">
+	<div class="col-md-6">
+			{{> song_viz_controls}}
+			{{> song_feature_list}}
+	</div>
+	<div class="col-md-6">
+			{{> song_vizjs}}
+	</div>
+</div>
+
+</template>
+-->
+<template name="song_viz">
+	<div class="row">
+		<h2>plotWave</h2>
+		<div class="col-xs-3 controls">
+			{{> song_viz_controls}}
+		</div>
+		<div class="plotwave">
+			{{> song_vizjs}}
+		</div>
+		<div class="col-xs-3 list_box">
+			{{> song_feature_list}}
+		</div>
+	</div>
+</template>
+<template name="song_viz_controls">
+	<form>
+		<!-- list of available single features -->
+		SongWave Value
+		<br/>
+		<select class="js-select-single-feature">
+			{{#each get_feature_names "single"}}
+			<option value="{{name}}">{{name}}</option>
+			{{/each}}
+		</select>
+		<br>
+		
+		<button class="btn js-show-blobs">blobs</button>
+		<button class="btn js-show-timeline">time</button>
+		<button class="btn js-show-graph">graph</button>
+	</form>
+</template>	
+
+
+<template name="song_feature_list">
+	<ul>
+	{{#each get_all_feature_values}}
+		<div class="list_div">
+			<li>
+				<span class="list artist">
+					{{artist}} 
+				</span>
+				<br>
+				<span class="list title">
+					&emsp;{{title}}
+				</span>
+				<br>
+				<span class="list val">
+					&emsp;&emsp;{{value}}
+				</span>
+			</li>
+		</div>
+	{{/each}}
+	</ul>
+</template>
+
+<template name="song_vizjs">
+	<div id="visjs"></div>
+</template>
+

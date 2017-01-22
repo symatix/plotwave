@@ -1,0 +1,86 @@
+/* CSS declarations go here */
+@font-face {
+  font-family: artist;
+  src:
+  url("/FHADEVANNC.ttf");
+}
+@font-face {
+  font-family: title;
+  src:
+  url("/stony.ttf");
+}
+@font-face {
+  font-family: casual;
+  src:
+  url("/mn.otf");
+}
+@font-face {
+  font-family: casualIl;
+  src:
+  url("/mi.otf");
+}
+body{
+	background-color:#ebf0fa;
+	font-family:casual
+}
+h2{
+	font-family:title;
+	font-size:45x;
+}
+button{
+	font-family: artist;
+	margin-top:15px;
+	width:82px;
+	height:40px;
+	color:white;
+	text-align:center !important;
+	background-color:#2d5986;
+}
+button:hover{
+	color:white !important;
+	background-color:#19334d;
+}
+button:focus{
+	color:white !important;
+	background-color:#19334d;
+}
+#visjs{
+	display:block;
+	float:right;
+	height:502px;
+	width:800px;
+	border:2px solid #b3b3b3;
+	background-color:#ffffff;
+}
+.vis-label{
+	fill-opacity:0;
+	color:#000000;
+}
+
+.vis-label:hover{
+	fill-opacity:1;
+}
+.controls{
+}
+.plotwave{
+}
+.list_box{
+	height:400px;
+	overflow-y:scroll;
+	border:2px solid #b3b3b3;
+	margin-top:10px;
+	background-color:#ffffff;
+}
+.list_div{
+	display:block;
+	float:left;
+	border-bottom:2px dashed #cccccc;
+	margin-top:10px; 
+}
+.artist{
+	font-family:artist;
+	font-size:20px;
+}
+.val{
+	font-family:'Calibri Light';
+}
